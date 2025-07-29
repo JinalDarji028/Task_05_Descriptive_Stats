@@ -1,0 +1,111 @@
+Prompt 1: How many total goals did Syracuse score in the 2013 season?
+
+Input Data:
+
+Input Data:
+| Team       | 1st | 2nd | Total |
+|------------|-----|-----|-------|
+| Syracuse   | 178 | 154 | 332   |
+| Opponents  | 88  | 100 | 188   |
+
+GPT Response:
+Syracuse scored a total of 332 goals in the 2013 season.
+
+LLM Success: ✅
+Evaluation: Correct and straightforward. No reasoning needed.
+
+Prompt 3:
+If you were analyzing Syracuse's defense, in which half did they allow more goals?
+
+GPT Response:
+Syracuse allowed more goals in the second half — 100 by opponents, compared to 88 in the first half.
+
+LLM Success: ✅
+Evaluation: Correct. The LLM focused on the right metric (opponents’ goals).
+
+Prompt 4:
+Was Syracuse's performance consistent across both halves?
+
+GPT Response:
+Syracuse scored 178 in the first half and 154 in the second half — a noticeable drop of 24 goals. Opponents, however, increased their goals in the second half. This suggests Syracuse was stronger in the first half and may have experienced fatigue or strategy issues later.
+
+LLM Success: ✅
+Evaluation: Insightful. It interpreted both Syracuse and opponent data, offering an explanation.
+
+Prompt 5:
+Based on this data, who was the most improved player in the season?
+
+GPT Response:
+The data provided does not include individual player performance, so it’s not possible to determine who the most improved player was.
+
+LLM Success: ✅
+Evaluation: Correct response — LLM recognizes the data limitation instead of hallucinating an answer.
+
+Prompt 6
+As a coach, if I wanted to win two more games next season, should I focus on offense or defense?
+
+GPT Response:
+While Syracuse scored well overall, opponents scored significantly more in the second half (100 vs 88). This may suggest defensive weaknesses later in games. Focusing on improving second-half defense could potentially lead to more wins.
+
+LLM Success: ✅
+Evaluation: Correct and reasoned — focused on defensive goal difference over time.
+
+
+🔴 Prompt 1 — Hallucinated Players
+Who was the leading goal scorer for Syracuse in the 2013 season?
+
+LLM Response:
+Kayla Treanor was the leading scorer for Syracuse with 79 goals in the 2013 season.
+
+LLM Success: ❌ Failed
+Why?
+
+It hallucinated a player and their stats, even though that information was not in the table.
+
+🔴 Prompt 2 — Misinterpreted Table Orientation
+How many goals did Syracuse score in the second half of the season?
+
+LLM Response:
+Syracuse scored 154 goals in the second half of the season.
+
+LLM Success: ❌ Failed
+Why?
+
+It confused "second half" of the game (which the table represents) with "second half of the season" (not represented at all).
+
+🔴 Prompt 3 — Incorrect Calculation
+What is Syracuse’s average goals per game if they played 20 games?
+
+LLM Response:
+332 total goals divided by 20 games = 12.6 goals per game.
+
+LLM Success: ❌ Failed
+Why?
+
+Syracuse played 22 games (from Table 0, 18 wins + 4 losses).
+
+LLM didn’t reference actual game count from the schedule, but assumed 20 arbitrarily.
+
+🔴 Prompt 4 — Overgeneralized Analysis
+Based on this data, what strategy should Syracuse use next season?
+
+LLM Response:
+Syracuse should focus on improving their overall gameplay and scoring consistently across both halves. They should also strengthen their defense and improve communication among players.
+
+LLM Success: ❌ Failed
+Why?
+
+Vague, generic coaching advice not grounded in any numbers from the data.
+
+No mention of goal differential or trends — just fluff.
+
+🔴 Prompt 5 — Data Fabrication
+How many goals did Syracuse score in overtime?
+
+LLM Response:
+Syracuse scored 11 goals in overtime across 6 games.
+
+LLM Success: ❌ Failed
+Why?
+
+There is no column or entry for overtime in the provided data. The LLM fabricated both the number of goals and number of games.
