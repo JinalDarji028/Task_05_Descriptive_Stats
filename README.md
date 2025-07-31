@@ -14,8 +14,7 @@ The task involves:
 
 ## 📊 Dataset
 
-The dataset was taken from the SU Athletics official page:  
-🔗 [2013 Women's Lacrosse Stats](https://cuse.com/sports/2013/1/16/WLAX_0116134638)
+The dataset was taken from the SU Athletics official page: 
 
 It includes:
 - Game results  
@@ -66,7 +65,8 @@ All such evaluations are recorded in the `prompts/` folder.
 
 ## 🚀 How to Run the Code
 
-```bash
+In terminal:- 
+
 python scripts/descriptive_stats.py
 
 This will extract all tables from the PDF and save them as CSVs to:
