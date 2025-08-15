@@ -1,0 +1,50 @@
+# Prompt Examples — 2013 Syracuse Women’s Lacrosse Dataset
+
+# ------------------------
+# SUCCESSFUL PROMPTS (✅)
+# ------------------------
+
+Prompt: How many total goals did Syracuse score in 2013?
+Input Data: Goals total row from "Goals by Period" — Syracuse: 332
+Expected Output: Syracuse scored 332 total goals in 2013.
+LLM Result: Correct ✅
+
+Prompt: Who scored more goals in the first half, Syracuse or their opponents?
+Input Data: 1st Period — Syracuse: 178, Opponents: 88
+Expected Output: Syracuse, with 178 goals vs opponents' 88.
+LLM Result: Correct ✅
+
+Prompt: What is Syracuse’s overall shooting percentage for 2013?
+Input Data: Goals = 332, Shots = 700
+Expected Output: 332 / 700 ≈ 47.43%
+LLM Result: Correct ✅
+
+Prompt: What was the total number of saves made by both teams combined?
+Input Data: Saves — Syracuse: 129, Opponents: 201
+Expected Output: 330 combined saves.
+LLM Result: Correct ✅
+
+
+# ------------------------
+# FAILED PROMPTS (❌)
+# ------------------------
+
+Prompt: Who was the most improved player in 2013?
+Input Data: Dataset has no player improvement stats or previous season data.
+Expected Output: Not determinable from dataset.
+LLM Result: Incorrect ❌ (fabricated a player name and stats).
+
+Prompt: What was Syracuse’s shooting percentage in away games?
+Input Data: No home/away shooting breakdown in dataset.
+Expected Output: Not determinable from dataset.
+LLM Result: Incorrect ❌ (guessed a number).
+
+Prompt: Which player had the most assists in 2013?
+Input Data: Dataset has no player-level breakdown for assists.
+Expected Output: Not determinable from dataset.
+LLM Result: Incorrect ❌ (invented data).
+
+Prompt: How many goals did Syracuse score in overtime games?
+Input Data: Dataset has no overtime flag or scoring breakdown by period beyond 1st/2nd.
+Expected Output: Not determinable from dataset.
+LLM Result: Incorrect ❌ (assumed from unrelated data).
