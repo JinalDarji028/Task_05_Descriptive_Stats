@@ -1,0 +1,90 @@
+# Expanded LLM Prompts — Syracuse Women’s Lacrosse (2013)
+# Even split: 4 Success + 4 Failure
+
+[Success] Q1: How many total goals did Syracuse score in 2013?
+Input Data:
+| Team      | Total |
+|-----------|-------|
+| Syracuse  | 332   |
+| Opponents | 188   |
+Expected Answer:
+332
+Evaluation:
+✅ Success — Direct value from goals-by-period totals.
+
+----------------------------------------
+
+[Success] Q2: Which team had more total shots in 2013?
+Input Data:
+| Team      | Total |
+|-----------|-------|
+| Syracuse  | 700   |
+| Opponents | 413   |
+Expected Answer:
+Syracuse (700 vs 413)
+Evaluation:
+✅ Success — Correct max comparison from shots totals.
+
+----------------------------------------
+
+[Success] Q3: How many total saves did Syracuse make in 2013?
+Input Data:
+| Team      | Total |
+|-----------|-------|
+| Syracuse  | 129   |
+| Opponents | 201   |
+Expected Answer:
+129
+Evaluation:
+✅ Success — Direct value from saves totals.
+
+----------------------------------------
+
+[Success] Q4: What is Syracuse’s shots-on-goal rate (SOG%) for 2013?
+Input Data:
+Shots on Goal (SOG) = 533
+Shots = 700
+Expected Answer:
+533 / 700 ≈ 0.7614 → 76.14%
+Evaluation:
+✅ Success — Correct derived metric when both inputs are provided.
+
+----------------------------------------
+
+[Failure] Q5: Who was the most improved player in 2013?
+Input Data:
+(No prior-season baseline or player trend metrics in dataset.)
+Expected Answer:
+Not determinable with available data.
+Evaluation:
+❌ Failure — Undefined “improvement” metric; model may hallucinate.
+
+----------------------------------------
+
+[Failure] Q6: What was Syracuse’s shooting percentage in away games only?
+Input Data:
+(2013 tables provide season totals but no home/away breakdown for shots/goals.)
+Expected Answer:
+Not determinable from this dataset.
+Evaluation:
+❌ Failure — Missing dimension (location split).
+
+----------------------------------------
+
+[Failure] Q7: Which player had the most game-winning goals in 2013?
+Input Data:
+(There is no GWG column in the 2013 tables.)
+Expected Answer:
+Not tracked in this dataset.
+Evaluation:
+❌ Failure — Unsupported stat; model may invent values.
+
+----------------------------------------
+
+[Failure] Q8: How many yellow cards did Syracuse receive per period in 2013?
+Input Data:
+(Only season totals are available; no per-period card breakdown.)
+Expected Answer:
+Not available from the dataset.
+Evaluation:
+❌ Failure — Missing per-period penalty data.
