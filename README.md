@@ -71,3 +71,9 @@ python scripts/descriptive_stats.py
 
 This will extract all tables from the PDF and save them as CSVs to:
 outputs/extracted_tables/ 
+
+## Period 2 Expansion — 2013 Data
+
+- Added `prompts/expanded_prompts_2013.txt` (even split of success/failure prompts).
+- Added `prompt_refinement_2013.md`, `insights_2013.md`, and `ai_street_interview_2013.md`.
+- Focus remains on evaluating LLMs on the 2013 SU Women’s Lacrosse tables (goals, saves, shots, SOG, record).
